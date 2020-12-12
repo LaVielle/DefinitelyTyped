@@ -18,8 +18,17 @@ import {
 
 export interface ContentInset {
     top?: number;
+    left?: number;
+    right?: number;
     label?: number;
     input?: number;
+}
+
+export interface LabelOffset {
+    x0?: number;
+    y0?: number;
+    x1?: number;
+    y1?: number;
 }
 
 export interface TextFieldProps extends TextInputProps {
@@ -28,6 +37,7 @@ export interface TextFieldProps extends TextInputProps {
     fontSize?: number;
     labelFontSize?: number;
     contentInset?: ContentInset;
+    labelOffset?: LabelOffset;
 
     style?: StyleProp<TextStyle>;
     labelTextStyle?: StyleProp<TextStyle>;
